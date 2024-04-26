@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS global_tecnologias_academy;
+
+USE global_tecnologias_academy;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS employees (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  firstName VARCHAR(20) NOT NULL,
+  lastName VARCHAR(20) NOT NULL,
+  otherNames VARCHAR(50),
+  country ENUM('Colombia', 'Estados Unidos') NOT NULL,
+  identificationType VARCHAR(50) NOT NULL,
+  identificationNumber VARCHAR(20) UNIQUE NOT NULL,
+  email VARCHAR(300) UNIQUE NOT NULL,
+  dateOfEntry DATE NOT NULL,
+  area VARCHAR(50) NOT NULL,
+  status ENUM('Activo') DEFAULT 'Activo',
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+

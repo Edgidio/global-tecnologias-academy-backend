@@ -1,0 +1,25 @@
+{
+  "name": "global-tecnologias-academy",
+  "version": "1.0.0",
+  "description": "Sistema backend para gestionar empleados de Global Tecnologías Academy utilizando Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "type": "module",
+  "keywords": [
+    "express",
+    "backend",
+    "gestion",
+    "de",
+    "empleados"
+  ],
+  "author": "EDGIDIO RANZE LEON FLOREZ",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-validator": "^7.0.1",
+    "mysql2": "^3.9.7",
+    "uuid": "^9.0.1"
+  }
+}
